@@ -2,14 +2,14 @@ from typing import Any, Dict, Generator, List
 
 import typer
 
-from ..client import OpenAIClient
+from ..client import AIStudioClient
 from ..config import cfg
 from ..role import SystemRole
 
 
 class Handler:
     def __init__(self, role: SystemRole) -> None:
-        self.client = OpenAIClient(
+        self.client = AIStudioClient(
             cfg.get("OPENAI_API_HOST"), cfg.get("OPENAI_API_KEY")
         )
         self.role = role

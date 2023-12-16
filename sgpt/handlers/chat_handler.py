@@ -167,8 +167,8 @@ class ChatHandler(Handler):
     def make_messages(self, prompt: str) -> List[Dict[str, str]]:
         messages = []
         if not self.initiated and cfg.get("SYSTEM_ROLES") == "true":
-            messages.append({"role": "system", "content": self.role.role})
-        messages.append({"role": "user", "content": prompt})
+            messages.append({"role": "system", "parts": [{"text":self.role.role}]})
+        messages.append({"role": "user", "parts": [{"text":prompt}]})
         return messages
 
     @chat_session
