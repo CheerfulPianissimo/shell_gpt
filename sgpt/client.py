@@ -130,7 +130,7 @@ class AIStudioClient:
         :return: Response body JSON.
         """
         stream = DISABLE_STREAMING == "false"
-        print(messages)
+        #print(messages)
         data = {
             "contents": messages,
         }

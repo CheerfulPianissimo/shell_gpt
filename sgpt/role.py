@@ -13,7 +13,7 @@ from distro import name as distro_name
 from .config import cfg
 from .utils import option_callback
 
-SHELL_ROLE = """Provide only {shell} commands for {os} without any description.
+SHELL_ROLE = """Provide only fish commands for {os} without any description.
 If there is a lack of details, provide most logical solution.
 Ensure the output is a valid shell command.
 If multiple steps required try to combine them together."""
